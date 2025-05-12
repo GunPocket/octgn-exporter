@@ -3,9 +3,9 @@ import streamlit as st
 
 st.title("MTG OCTGN Deck Exporter")
 
-texto = st.text_area("Cole sua lista de cartas aqui", height=300)
+texto = st.text_area("Paste you deck list here", height=300)
 
-if st.button("Gerar .o8d"):
+if st.button("Generate .o8d"):
     linhas = texto.strip().split("\n")
     cartas = []
     xml_inicio = """<?xml version="1.0" encoding="utf-8" standalone="yes"?>
