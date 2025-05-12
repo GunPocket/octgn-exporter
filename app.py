@@ -1,7 +1,7 @@
 import urllib.request, json
 import streamlit as st
 
-st.title("MTG OCTGN Deck Exporter")
+st.title("EDH OCTGN Deck Exporter")
 
 texto = st.text_area("Paste you deck list here", height=300)
 
@@ -36,4 +36,4 @@ if st.button("Generate .o8d"):
             st.error(f"Erro ao buscar: {nome}")
 
     output = xml_inicio + xml_meio + "\n" + xml_fim
-    st.download_button("Baixar .o8d", output, file_name="deck.o8d")
+    st.download_button("Download deck", output, file_name="deck.o8d")
